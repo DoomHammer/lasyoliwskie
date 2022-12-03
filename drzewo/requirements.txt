@@ -1,0 +1,5 @@
+adafruit_pixelbuf==1.1.8
+neopixel==6.3.6
+adafruit_framebuf==1.4.14
+adafruit_pixel_framebuf==1.1.9
+adafruit_led_animation==2.6.1
