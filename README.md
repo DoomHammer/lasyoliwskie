@@ -9,7 +9,7 @@ hackathon was (un)usual sounds, particularly related to Gdańsk.
 Our team consisted of:
 - [tgbdc7](https://github.com/tgbdc7) and myself doing the hardware/software
 part,
-- Alek playing the solo,
+- [Alek](https://github.com/gruszal) playing the solo,
 - [Ralph](https://soundcloud.com/ralphgpl) doing field recording in the Oliwa
 Woods, composing music, and arranging it.
 
