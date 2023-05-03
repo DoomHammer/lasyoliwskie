@@ -98,7 +98,7 @@ able to save any changes to your project.
 On MacOS, you can get it with `brew install ableton-live-standard`.
 
 In Ableton Live (Standard or Suite, Lite does not have MIDI out),
-select Live->Preferences.
+select Live->Preferences on Mac (Options->Preferences on Windows).
 
 Find the MIDI tab and make sure Pi Pico has a checkmark next to the output
 device.
