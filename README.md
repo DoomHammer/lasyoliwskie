@@ -7,11 +7,12 @@ This fun project was built and recorded during the
 hackathon was (un)usual sounds, particularly related to Gdańsk.
 
 Our team consisted of:
+
 - [tgbdc7](https://github.com/tgbdc7) and myself doing the hardware/software
-part,
+  part,
 - [Alek](https://github.com/gruszal) playing the solo,
 - [Ralph](https://soundcloud.com/ralphgpl) doing field recording in the Oliwa
-Woods, composing music, and arranging it.
+  Woods, composing music, and arranging it.
 
 During the 8 hours of the hackathon we worked on a project titled
 "Lasy Oliwskie" ("Oliwa Woods").
@@ -34,14 +35,14 @@ created by [Tod Kurt](https://github.com/todbot), here relicensed to
 ## Bill of Materials (BoM)
 
 - 2 Raspberry Pi Picos (or other similar microcontrollers compatible with
-CircuitPython) (approx. cost: 20PLN, 5EUR, 5USD)
+  CircuitPython) (approx. cost: 20PLN, 5EUR, 5USD)
 - A 16x16 WS2812B LED matrix (approx cost: 70PLN, 30EUR, 30USD)
 - LED rings of decreasing diameter, we used: 45LED, 35LED, 24LED, 16LED, 8LED
-(approx cost: 140PLN, 30EUR, 30USD).
+  (approx cost: 140PLN, 30EUR, 30USD).
 - something to base your LED rings tree on, we used a paper cup, and cardboard
-together with hot glue
+  together with hot glue
 - for better effects: some nice diffuser, we used cloth grocery bags that were
-available at the spot
+  available at the spot
 - some wire or better yet JST 3-pin connectors
 
 Total cost: around 250-300PLN, 70-80EUR, 70-80USD.
@@ -108,10 +109,10 @@ device.
 ## Exploring the Project
 
 1. [Download the Ableton project](https://doomhammer.fra1.digitaloceanspaces.com/Music_Jam.alp)
-2. Import the Ableton Project (double clicking works fine)
-3. Open it
-4. Press play
-5. Enjoy
+1. Import the Ableton Project (double clicking works fine)
+1. Open it
+1. Press play
+1. Enjoy
 
 The tree should react to the guitar solo, the moss to the beat. If you get
 different effects, you probably need to swap the devices connected as outputs

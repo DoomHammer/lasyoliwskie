@@ -4,14 +4,15 @@
 
 # This is the moss part
 
-import time
-import board
 import random
+from contextlib import suppress
+
+import adafruit_pixel_framebuf
+import board
+import neopixel
 
 # libraries installed with circup
 import usb_midi
-import neopixel
-import adafruit_pixel_framebuf
 
 # local libraries in CIRCUITPY
 import winterbloom_smolmidi as smolmidi
@@ -32,7 +33,8 @@ play_colors = [0xBAB86C, 0x376B2F, 0x556B2F, 0x6B632F, 0x799943]
 
 dim = 25
 
-# We're using a 16x16 square LED matrix. However to get better effects speed, we're only iterating over half of the matrix.
+# We're using a 16x16 square LED matrix. However to get better effects speed,
+# we're only iterating over half of the matrix.
 leds_w = 16
 leds_h = 8
 
@@ -43,7 +45,7 @@ leds_framebuf = adafruit_pixel_framebuf.PixelFramebuffer(
     leds, leds_w, leds_h, reverse_x=True, alternating=True
 )
 
-leds_framebuf.fill(0x556B2F) # Let's light up the tree with Dark Olive Green
+leds_framebuf.fill(0x556B2F)  # Let's light up the tree with Dark Olive Green
 leds_framebuf.display()
 
 playing_notes = []  # which notes are playing
@@ -59,10 +61,8 @@ def midi_receive():
             playing_notes.append(note)
         elif msg.type == smolmidi.NOTE_OFF:
             note = msg.data[0]
-            try:
+            with suppress(ValueError):
                 playing_notes.remove(note)
-            except ValueError:  # note already removed
-                pass
 
 
 def display_notes():

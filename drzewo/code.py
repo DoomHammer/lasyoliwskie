@@ -4,14 +4,15 @@
 
 # This is the tree part
 
-import time
-import board
 import random
+from contextlib import suppress
+
+import adafruit_pixel_framebuf
+import board
+import neopixel
 
 # libraries installed with circup
 import usb_midi
-import neopixel
-import adafruit_pixel_framebuf
 
 # local libraries in CIRCUITPY
 import winterbloom_smolmidi as smolmidi
@@ -60,10 +61,8 @@ def midi_receive():
             playing_notes.append(note)
         elif msg.type == smolmidi.NOTE_OFF:
             note = msg.data[0]
-            try:
+            with suppress(ValueError):
                 playing_notes.remove(note)
-            except ValueError:  # note already removed
-                pass
 
 
 def display_notes():
