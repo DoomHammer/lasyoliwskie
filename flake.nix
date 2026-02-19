@@ -1,7 +1,7 @@
 {
   description = "Lasy Oliwskie";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05-small";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     flake-utils.url = "github:numtide/flake-utils";
 
     flake-parts = {
@@ -22,12 +22,6 @@
         nixpkgs-stable.follows = "";
         flake-compat.follows = "";
       };
-    };
-
-    flake-checker = {
-      type = "github";
-      owner = "DeterminateSystems";
-      repo = "flake-checker";
     };
 
     # a tree-wide formatter
@@ -91,7 +85,6 @@
                 # make sure our nix code is of good quality before we commit
                 statix = mkHook { };
                 deadnix = mkHook { };
-                flake-checker = mkHook { package = inputs.flake-checker.packages.${system}.flake-checker; };
 
                 # ensure we have nice formatting
                 treefmt = mkHook { package = config.treefmt.build.wrapper; };
